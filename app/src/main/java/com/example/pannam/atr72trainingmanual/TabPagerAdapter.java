@@ -22,7 +22,7 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
 
         switch (position){
             case 0:
-                TabOneFragment tab1= new TabOneFragment();
+                Introduction tab1= new Introduction();
                 return tab1;
 
             case 1:

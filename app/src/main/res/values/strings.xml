@@ -7,4 +7,5 @@
     <string name="action_settings">Settings</string>
     <string name="atr_72_training_manual">ATR 72 TRAINING MANUAL</string>
     <string name="button_text">Change Text</string>
+    <string name="introduction_text">The ATR 72 is a twin turboprop powered aircraft designed to carry 64 to 74 passengers. It is built in cooperation by EADS(France) and ALENIA(Italy)</string>
 </resources>

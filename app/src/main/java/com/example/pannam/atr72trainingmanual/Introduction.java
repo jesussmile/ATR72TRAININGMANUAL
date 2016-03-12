@@ -3,6 +3,7 @@ package com.example.pannam.atr72trainingmanual;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 /**
  * Created by pannam on 3/2/2016.
  */
+
 public class Introduction extends Fragment {
     @Nullable
     @Override
@@ -38,7 +40,12 @@ public class Introduction extends Fragment {
 
         final TextView introText = new TextView(getActivity());
         introText.setText(R.string.introduction_text);
+       // introText.setTextAppearance(android.R.style.TextAppearance_Medium);
+        introText.setTextSize(20);
+        introText.setPadding(25,25,25,25);
+        introText.setTextColor(ContextCompat.getColor(this.getContext(), R.color.colorPrimary));
         params.addRule(RelativeLayout.BELOW, introImage.getId());
+        introText.setAnimation(AnimationUtils.loadAnimation(this.getContext(),android.R.anim.slide_in_left));
         relativeLayout.addView(introText,params);
         relativeLayout.addView(introImage);
 
@@ -46,4 +53,5 @@ public class Introduction extends Fragment {
         return relativeLayout;
 
     }
+
 }

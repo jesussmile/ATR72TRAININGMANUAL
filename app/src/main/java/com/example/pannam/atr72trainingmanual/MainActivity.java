@@ -109,10 +109,10 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_introduction) {
             // Handle the camera action
-            fn.beginTransaction().replace(R.id.content_frame, new ToolbarFragment()).commit();
-
+          //  fn.beginTransaction().replace(R.id.content_frame, new ToolbarFragment()).commit();
+            fn.beginTransaction().replace(R.id.content_frame, Introduction
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

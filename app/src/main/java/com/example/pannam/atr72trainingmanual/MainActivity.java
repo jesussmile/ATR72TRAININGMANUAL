@@ -1,9 +1,9 @@
 package com.example.pannam.atr72trainingmanual;
 
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-        TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
         tabLayout.addTab(tabLayout.newTab().setText("Introduction"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 2 Item"));
@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity
         tabLayout.addTab(tabLayout.newTab().setText("Tab 3 Item"));
 
 
-        final ViewPager viewPager = (ViewPager)findViewById(R.id.pager);
-        final PagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        final PagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        FragmentManager fn = getFragmentManager();
-        fn.beginTransaction().replace(R.id.content_frame, new TextFragment()).commit();
+        // FragmentManager fn = getFragmentManager();
+        // fn.beginTransaction().replace(R.id.content_frame, new TextFragment()).commit();
     }
 
     @Override
@@ -104,15 +104,16 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
-        FragmentManager fn = getFragmentManager();
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        //  FragmentManager fn = getSupportFragmentManager();
 
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_introduction) {
-            // Handle the camera action
-          //  fn.beginTransaction().replace(R.id.content_frame, new ToolbarFragment()).commit();
-            fn.beginTransaction().replace(R.id.content_frame, Introduction
+
+            viewPager.setCurrentItem(0);
+
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

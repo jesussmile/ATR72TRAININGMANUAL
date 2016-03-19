@@ -12,8 +12,9 @@ import android.widget.TextView;
 /**
  * Created by pannam on 3/2/2016.
  */
-public class TabTwoFragment extends Fragment{
+public class TabTwoFragment extends Fragment {
     View view_a;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class TabTwoFragment extends Fragment{
 //        final TextView rowTextView = (TextView) new TextView(
 //                getActivity());
 //        rowTextView.setText(name);
-      //  final TextView rowTextView;
+        //  final TextView rowTextView;
 
 //        //return inflater.inflate(R.layout.fragment_2,container,false);
 //        LinearLayout ll = new LinearLayout(getActivity());
@@ -43,9 +44,8 @@ public class TabTwoFragment extends Fragment{
         final TextView rowTextView = (TextView) new TextView(
                 getActivity());
         rowTextView.setText("Dynamically created Layout from Fragment");
-layoutHorizontal.addView(rowTextView);
+        layoutHorizontal.addView(rowTextView);
         return layoutHorizontal;
-
 
 
     }

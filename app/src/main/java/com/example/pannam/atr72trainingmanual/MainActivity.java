@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
         tabLayout.addTab(tabLayout.newTab().setText("Introduction"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 2 Item"));
+        tabLayout.addTab(tabLayout.newTab().setText("Production Chart"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 3 Item"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 3 Item"));
 
@@ -114,7 +114,9 @@ public class MainActivity extends AppCompatActivity
 
             viewPager.setCurrentItem(0);
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.production_chart) {
+
+            viewPager.setCurrentItem(1);
 
         } else if (id == R.id.nav_slideshow) {
 

@@ -4,6 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.pannam.atr72trainingmanual.ATA00.Introduction;
+import com.example.pannam.atr72trainingmanual.ATA00.ProductionChart;
+
 /**
  * Created by pannam on 3/2/2016.
  */
@@ -26,7 +29,8 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
                 return tab1;
 
             case 1:
-                TabTwoFragment tab2 = new TabTwoFragment();
+
+                ProductionChart tab2 = new ProductionChart();
                 return tab2;
 
             case 2:

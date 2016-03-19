@@ -1,4 +1,4 @@
-package com.example.pannam.atr72trainingmanual;
+package com.example.pannam.atr72trainingmanual.ATA00;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +11,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.pannam.atr72trainingmanual.R;
 
 /**
  * Created by pannam on 3/2/2016.
